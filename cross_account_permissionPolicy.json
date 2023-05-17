@@ -1,0 +1,62 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadS3",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:ListBucket",
+        "s3:GetBucketLocation",
+        "s3:ListMultipartUploadParts",
+        "s3:AbortMultipartUpload",
+        "s3:PutObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::arn:aws:s3:::athena-results-cache/*",
+        "arn:aws:s3:::arn:aws:s3:::athena-results-cache"
+      ]
+    },
+    {
+      "Sid": "RunAthenaQueries",
+      "Effect": "Allow",
+      "Action": [
+        "athena:StartQueryExecution",
+        "athena:GetQueryExecution",
+        "athena:GetWorkGroup",
+        "athena:GetQueryRuntimeStatistics",
+        "athena:GetQueryResults",
+        "athena:ListNamedQueries",
+        "athena:ListQueryExecutions",
+        "athena:CreateNamedQuery",
+        "athena:DeleteNamedQuery",
+        "athena:UpdateNamedQuery",
+        "athena:GetNamedQuery",
+        "athena:BatchGetNamedQuery"
+      ],
+      "Resource": [
+        "arn:aws:athena:<REGION>:<ACCOUNT_UID>:workgroup/<WORKFGROUP_NAME>"
+      ]
+    },
+    {
+      "Sid": "ReadGlue",
+      "Effect": "Allow",
+      "Action": [
+        "glue:GetDatabase",
+        "glue:GetTables",
+        "glue:GetTable",
+        "glue:GetPartitions"
+      ],
+      "Resource": [
+        "arn:aws:glue:<REGION>:<ACCOUNT_UID>:catalog",
+        "arn:aws:glue:<REGION>:<ACCOUNT_UID>:database/<DATABASE_NAME>*",
+        "arn:aws:glue:<REGION>:<ACCOUNT_UID>:table/<DATABASE_NAME>*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": ["lakeformation:GetDataAccess"],
+      "Resource": "*"
+    }
+  ]
+}
