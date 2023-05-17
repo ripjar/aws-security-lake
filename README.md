@@ -141,6 +141,6 @@ Example config object:
   - If you are attempting to use a fielded query across multiple sources, you must ensure that the field is available in both sources, if a field does not exist in a source which is queried against then the query will fail.
   - The failing of a query against a single source will have no impact on the remaining sources.
 
-For further support, please contact your Ripjar account manager or agreed support system.
+**For further support, please contact your Ripjar account manager or agreed support system.**
 
 
