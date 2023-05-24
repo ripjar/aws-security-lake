@@ -35,7 +35,7 @@
         "athena:BatchGetNamedQuery"
       ],
       "Resource": [
-        "arn:aws:athena:<REGION>:<ACCOUNT_UID>:workgroup/<WORKFGROUP_NAME>"
+        "arn:aws:athena:<REGION>:<ACCOUNT_UID>:workgroup/<WORKGROUP_NAME>"
       ]
     },
     {
@@ -49,8 +49,8 @@
       ],
       "Resource": [
         "arn:aws:glue:<REGION>:<ACCOUNT_UID>:catalog",
-        "arn:aws:glue:<REGION>:<ACCOUNT_UID>:database/<DATABASE_NAME>*",
-        "arn:aws:glue:<REGION>:<ACCOUNT_UID>:table/<DATABASE_NAME>*"
+        "arn:aws:glue:<REGION>:<ACCOUNT_UID>:database/amazon_security_lake_glue_db*",
+        "arn:aws:glue:<REGION>:<ACCOUNT_UID>:table/amazon_security_lake_glue_db*/*"
       ]
     },
     {
