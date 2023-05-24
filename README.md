@@ -79,7 +79,8 @@ Cross Account IAM role assumptions are used to enable the LTI SAAS application (
 
 [Create an IAM role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_third-party.html) that trusts the Labyrinth Threat investigations AWS account.
 The role you create should have access to read your AWS glue tables, query from AWS Athena, and read data from S3. This should be done on a least privileged basis, giving access only to the buckets and tables you wish to be able to query from Labyrinth Threat Investigations. It is recommended to use an External ID for increased security. 
-Once this role has been created you will need to supply Ripjar with the ARN of the role and the External ID. Labyrinth Threat Investigations will then assume that role to query your Security Lake data. This can be found on the Role details page and will appear with this syntax. `arn:hero:iam::<ACCOUNT_ID>:role/<ROLE_NAME>`
+Once this role has been created you will need to supply Ripjar with the ARN of the role and the External ID. Labyrinth Threat Investigations will then assume that role to query your Security Lake data. This can be found on the Role details page and will appear with this syntax:
+`arn:aws:iam::<ACCOUNT_ID>:role/<ROLE_NAME>`
 
 #### 1.2 Example Polices
 There are two policies in this repository which describe the permissions the IAM role will assume when performing queries on the target Security Lake accross accounts.
@@ -141,6 +142,6 @@ Example config object:
   - If you are attempting to use a fielded query across multiple sources, you must ensure that the field is available in both sources, if a field does not exist in a source which is queried against then the query will fail.
   - The failing of a query against a single source will have no impact on the remaining sources.
 
-**For further support, please contact your Ripjar account manager or agreed support system.**
+**For further support, please contact your Ripjar account manager or follow your agreed support system.**
 
 
