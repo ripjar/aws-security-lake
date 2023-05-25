@@ -26,10 +26,10 @@ Labyrinth for Threat Investigations (LTI) is a Ripjar managed SaaS that provides
 
 **Potential use cases:**
 
-- Threat Investigations - Empower analysts to leverage automation to quickly expose the impact of malicious activity by building connections across local and remote data sources and derived knowledge store
-- Threat Hunting - Proactively Explore and Discover early indications of threat actors preparing to compromise network or corporate security, sharing intelligence with colleagues and partners
-- Incident Response - Respond to cyber and physical threats in real-time utilising a single view of risk and intelligence to understand potential impact 
--	Knowledge Management - Annotate findings from investigations directly on top of fused data sources with full lineage back to underlying data. Analysts collate a functional knowledge layer to support smarter decisions and investigations
+- Threat Investigations - Empower analysts to leverage automation to quickly expose the impact of malicious activity by building connections across local and remote data sources and derived knowledge store.
+- Threat Hunting - Proactively Explore and Discover early indications of threat actors preparing to compromise network or corporate security, sharing intelligence with colleagues and partners.
+- Incident Response - Respond to cyber and physical threats in real-time utilising a single view of risk and intelligence to understand potential impact.
+-	Knowledge Management - Annotate findings from investigations directly on top of fused data sources with full lineage back to underlying data. Analysts collate a functional knowledge layer to support smarter decisions and investigations.
 
 **Key features of LTI:**
 -	Investigations UI: An analytical canvas for curating, fusing and interrogating unstructured and structured data.  This enables entity-centric analysis through network, geospatial, timeline and other visualisations and filters.
@@ -37,8 +37,8 @@ Labyrinth for Threat Investigations (LTI) is a Ripjar managed SaaS that provides
 -	Glue Data On-Boarding Wizard: Built using an RPA workflow, the wizard enables rapid on-boarding of new data sources. Analysts input the Glue table target, edit schema transformations if required and the data-source is automatically added to the Search App.
 -	Knowledge: A graph-type store of versioned entities and relationships that can be publish to and pulled from. This enables analysts to enrich their investigations with data curated by others across the Enterprise.
 -	Insights: Analysts can write versioned intelligence reports with live data and visualisations. Insights can be securely shared with document, section / tear lines, and data object level security.
-- Explorer:  A UI which provides analysts with the ability to understand, filter and aggregate Data-sets through several views.
--	Entity Importer: Entities can be extracted by analysts manually or via NLP automatically, and imported into the Investigation as nodes. This allows for more rapid searching and navigating through specific data points relevant to the domain.
+- Explorer:  A UI which provides analysts with the ability to understand, filter and aggregate data-sets through several views.
+-	Entity Importer: Entities can be extracted by analysts manually or via NLP automatically and imported into the Investigation as nodes. This allows for more rapid searching and navigating through specific data points relevant to the domain.
 
 
 ### What is Amazon Security Lake
@@ -83,7 +83,7 @@ Once this role has been created you will need to supply Ripjar with the ARN of t
 `arn:aws:iam::<ACCOUNT_ID>:role/<ROLE_NAME>`
 
 #### 1.2 Example Polices
-There are two policies in this repository which describe the permissions the IAM role will assume when performing queries on the target Security Lake accross accounts.
+There are two policies in this repository which describe the permissions the IAM role will assume when performing queries on the target Security Lake across accounts.
 The trust policy describes who can assume the role, the permission policy describes what that role can do.
 
 1. Please use or copy the policy files in this repository, and update the parameters in the angled brackets. e.g. `<TABLE NAME>`.
