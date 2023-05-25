@@ -22,7 +22,7 @@
 
 ### What is Labyrinth Threat Investigations (LTI)
 
-Labyrinth for Threat Investigations (LTI) is a Ripjar managed SAAS that provides a comprehensive enterprise-wide approach to threat exploration at scale.  It is based on data fusion, with fine-grained security, extensible workflows and sophisticated reporting. Augment your analysts with LTI’s Security Lake integration including native OCSF schema support. With LTI, analysts can assess data from various sources, investigate and manage risk across your environments, enriching your investigations with external data sources using Ripjar's RPA workflows and AI based analytics.
+Labyrinth for Threat Investigations (LTI) is a Ripjar managed SaaS that provides a comprehensive enterprise-wide approach to threat exploration at scale.  It is based on data fusion, with fine-grained security, extensible workflows and sophisticated reporting. Augment your analysts with LTI’s Security Lake integration including native OCSF schema support. With LTI, analysts can assess data from various sources, investigate and manage risk across your environments, enriching your investigations with external data sources using Ripjar's RPA workflows and AI based analytics.
 
 **Potential use cases:**
 
@@ -49,20 +49,20 @@ The data lake is backed by Amazon Simple Storage Service (Amazon S3) buckets, an
 
 Security Lake automates the collection of security-related log and event data from integrated AWS services and third-party services. It also helps you manage the lifecycle of data with customizable retention and replication settings. Security Lake converts ingested data into Apache Parquet format and a standard open-source schema called the Open Cybersecurity Schema Framework (OCSF).
 
-Ripjar's Labyrinth Threat Investigations can subscribe by querey to the data that's stored in Security Lake for incident response and security data analytics.
+Ripjar's Labyrinth Threat Investigations can subscribe to query the data that's stored in Security Lake for incident response and security data analytics.
 
 ### Integration overview
 
-This integration guide provides instructions for setting up LTI and Amazon Security Lake so that the Security Lake data can be queried within LTI SAAS. This integration will:
+This integration guide provides instructions for setting up LTI and Amazon Security Lake so that the Security Lake data can be queried within LTI SaaS. This integration will:
 
-1. Configure cross-account polices and IAM role to share data between the host/customer AWS account, and Ripjar LTI SAAS account.
+1. Configure cross-account polices and IAM role to share data between the host/customer AWS account, and Ripjar LTI SaaS account.
 2. Add a new Security Lake source to be available for Athena and LTI.
-3. Configure the LTI Search Application Qeury the new Security Lake Source.
+3. Configure the LTI Search Application to query the new Security Lake Source.
 4. Verify the new source is available to be searched in the LTI application.
 
 ### Prerequisites
 
-- You must be a customer of Ripjar Labyrinth Threat Investigations (LTI) SAAS. This is run on Ripjar managed AWS.
+- You must be a customer of Ripjar Labyrinth Threat Investigations (LTI) SaaS. This is run on Ripjar managed AWS.
 - Your source AWS account with the required Amazon Security Lake sources deployed and connected. (e.g. CloudTrail, VPC Flow, Route53 etc.)
 - Ensure AWS [Athena](https://docs.aws.amazon.com/athena/latest/ug/getting-started.html) has access to query Security Lake data. Please follow [this setup guide](https://docs.aws.amazon.com/security-lake/latest/userguide/getting-started.html#explore-data-lake) for further details if you are unfamiliar with Athena.
 - Note the names of the tables you are querying.
@@ -75,7 +75,7 @@ This integration guide provides instructions for setting up LTI and Amazon Secur
 #### 1.1 Configure IAM Roles
 
 The two AWS accounts must have the appropriate roles and policies to enabled cross account searching of data in a secure and trusted manner.
-Cross Account IAM role assumptions are used to enable the LTI SAAS application (Ripjar managed AWS) to search Security Lake data originating from the source (customer) AWS account.
+Cross Account IAM role assumptions are used to enable the LTI SaaS application (Ripjar managed AWS) to search Security Lake data originating from the source (customer) AWS account.
 
 [Create an IAM role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_third-party.html) that trusts the Labyrinth Threat investigations AWS account.
 The role you create should have access to read your AWS glue tables, query from AWS Athena, and read data from S3. This should be done on a least privileged basis, giving access only to the buckets and tables you wish to be able to query from Labyrinth Threat Investigations. It is recommended to use an External ID for increased security. 
