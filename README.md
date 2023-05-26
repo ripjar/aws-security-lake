@@ -22,7 +22,7 @@
 
 ### What is Labyrinth Threat Investigations (LTI)
 
-Labyrinth for Threat Investigations (LTI) is a Ripjar managed SaaS that provides a comprehensive enterprise-wide approach to threat exploration at scale.  It is based on data fusion, with fine-grained security, extensible workflows and sophisticated reporting. Augment your analysts with LTI’s Security Lake integration including native OCSF schema support. With LTI, analysts can assess data from various sources, investigate and manage risk across your environments, enriching your investigations with external data sources using Ripjar's RPA workflows and AI based analytics.
+Labyrinth for Threat Investigations (LTI) is a Ripjar managed SaaS solution that provides a comprehensive enterprise-wide approach to threat exploration at scale.  It is based on data fusion, with fine-grained security, extensible workflows and sophisticated reporting. Augment your analysts with LTI’s Security Lake integration including native OCSF schema support. With LTI, analysts can assess data from various sources, investigate and manage risk across your environments, enriching your investigations with external data sources using Ripjar's RPA workflows and AI-based analytics.
 
 **Potential use cases:**
 
