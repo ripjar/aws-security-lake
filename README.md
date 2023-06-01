@@ -114,7 +114,7 @@ The following steps need to be taken in order to onboard a new data source to La
 An example config object is shown below. Please note you will need to populate the Athena Table Name `athenaTableName:` and the Labyrinth RPA Workflow ID `preAsyncHook` as noted by the angled brackets.
   
 Example config object:
-      `{
+      ```{
         id: "athena__cloudtrail", // Id and datasetId must match
         label: "CloudTrail", // Friendly UI label
         jobProcessor: "athena_request_processor", // Job Processor used to manage the searching of Athena
@@ -130,7 +130,7 @@ Example config object:
           },
           preAsyncHook: <WORKFLOW ID>
         },
-      }, `
+      }```
   
   This can be tested by running a known query or wildcard search in the LTI application's search.
   ![Screenshot LTI Search Example](/imgs/screenshot-lti-search.png)
