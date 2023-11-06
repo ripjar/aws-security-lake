@@ -90,7 +90,7 @@ The trust policy describes who can assume the role, and the permission policy de
 1. Please use or copy the policy files in this repository, and update the parameters in the angled brackets, for example `<TABLE NAME>`.
    1. *the two JSON policy files that need to be updated are:*
       1. [cross_account_trust_policy.json](/cross_account_trust_policy.json)
-      1. [cross_account_permissionPolicy.json](/cross_account_permission_policty.json)
+      1. [cross_account_permissionPolicy.json](/cross_account_permissionPolicy.json)
   
 1. In the AWS Console, go to 'IAM console', 'Roles', `<CROSS ACCOUNT ROLE NAME>`, 'Permissions policies' and upload/edit the `cross_account_permissionPolicy.json` with your updated version.
 1. In the AWS Console, go to 'IAM console', 'Roles', `<CROSS ACCOUNT ROLE NAME>`, 'Trust relationships' and upload/edit the `cross_account_trust_policy.json` with your updated version.
